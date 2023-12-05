@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Expedientes</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="../fonts/source-font/source-font.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../plugins/fontawesome-free/css/all.min.css">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="../plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../dist/css/adminlte.min.css">
+  <!-- Alertify.js theme -->
+  <link rel="stylesheet" href="../plugins/alertifyjs/css/alertify.min.css">
+  <link rel="stylesheet" href="../plugins/alertifyjs/css/themes/default.min.css">
+  <link rel="stylesheet" href="../plugins/alertifyjs/css/themes/semantic.min.css">
+  <link rel="stylesheet" href="../plugins/alertifyjs/css/themes/bootstrap.min.css">
+  <!-- alertify.js -->
+  <script src="../plugins/alertifyjs/alertify.min.js"></script>
+  <!-- DataTables -->
+  <link rel="stylesheet" href="../plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="../plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+  <link rel="stylesheet" href="../plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+  <link rel="stylesheet" href="../plugins/datatables-datetime/dataTables.dateTime.min.css">
+  <!-- Icon -->
+  <link rel="shortcut icon" href="../media/img/logos/ship-login.jpg" />
+
+</head>
+
+<body class="hold-transition sidebar-collapse sidebar-mini">
+  <div class="wrapper">
+    <div class="preloader flex-column justify-content-center align-items-center">
+      <img class="animation__shake" src="../media/img/logos/ship-login.jpg" alt="ship-logo" height="60" width="60">
+    </div>
+
+    <!-- BARRA DE NAVEGACIÓN -->
+    <nav class="main-header navbar navbar-expand navbar-dark" style="background-color: #285c98;">
+      <!-- Left navbar links -->
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+        </li>
+      </ul>
+      <!-- Right navbar links -->
+
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+            <i class="fas fa-expand-arrows-alt"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <!-- /.BARRA DE NAVEGACIÓN -->
+
+    <!-- MENÚ LATERAL CONTENEDOR -->
+    <aside class="main-sidebar sidebar-dark-primary elevation-4" style="background-color: #1a3f6a;">
+      <!-- Brand Logo -->
+
+      <a href="#" class="brand-link">
+        <img src="../media/img/logos/ship-login.jpg" alt="w-ship-logo" class="brand-image" style="opacity: .8">
+        <span class="brand-text font-weight-light">Gestión</span>
+      </a>
+
+      <!-- MENÚ LATERAL CABECERA -->
+      <div class="sidebar">
+        <!-- Sidebar user panel (optional) -->
+        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+          <div class="image">
+            <img src="../media/img/users/user-male.png" class="img-circle elevation-2" alt="User Image">
+          </div>
+          <div class="info">
+            <a href="#" class="d-block">
+              Administrador
+            </a>
+          </div>
+        </div>
+        <!-- MENÚ LATERAL -->
+        <nav class="mt-3">
+          <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+            <li class="nav-item">
+              <a href="./homepage.html" class="nav-link">
+                <i class="fas fa-home nav-icon"></i>
+                <p>Inicio</p>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-solid fa-user"></i>
+                <p>Usuarios
+                  <i class="fas fa-angle-left right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="./user_register.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Registrar Usuario</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="./user_list.html" class="nav-link">
+                    <i class="far fa-circle nav-icon far fa-dot-circle"></i>
+                    <p>Listado de usuarios</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-ship"></i>
+                <p>Buques
+                  <i class="fas fa-angle-left right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="./ship_register.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Registrar Buque</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="./user_list.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Listado de Buques</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item menu-open">
+              <a href="#" class="nav-link active">
+                <i class="nav-icon fas fa-solid fa-folder-open"></i>
+                <p>Expedientes
+                  <i class="fas fa-angle-left right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class=" nav-item">
+                  <a href="./document_register.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Registrar Expediente</p>
+                  </a>
+                </li>
+                <li class=" nav-item">
+                  <a href="./document_list.html" class="nav-link active">
+                    <i class="far fa-circle nav-icon far fa-dot-circle"></i>
+                    <p>Listado de expedientes</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a href="../index.html" class="nav-link">
+                <i class="fas fa-power-off nav-icon"></i>
+                <p>Cerrar Sesion</p>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <!-- /.MENÚ LATERAL -->
+      </div>
+      <!-- /.MENÚ LATERAL CABECERA -->
+    </aside>
+
+    <!-- MENÚ LATERAL CONTENEDOR-->
+
+    <!-- CONTENT WRAPPER, CONTIENE EL CONTENIDO PRINCIPAL -->
+    <div class="content-wrapper">
+      <!-- Content Header (Page header) -->
+      <div class="content-header">
+        <div class="container-fluid">
+          <div class="row mb-2">
+            <div class="col-sm-12 text-center">
+              <h1 class="m-0">Listado de Expedientes</h1>
+            </div><!-- /.col -->
+          </div><!-- /.row -->
+        </div>
+        <!-- /.container-fluid -->
+      </div>
+      <!-- /.content-header -->
+
+      <!-- Contenido principal -->
+      <div class="content">
+        <div class="container-fluid">
+          <div class="card">
+            <div class="card-header">
+              <h5 class="d-flex justify-content-center">Datos de todos los Expedientes registrados</h5>
+              <a href="./document_register.html"><button type="button"
+                  class="btn btn-success btn-sm inline-block float-sm-right"><img
+                    src="../icons/archive-modules/folder-plus.svg" alt="añadir-expediente"
+                    style="margin-right: 7px">Agregar</button></a>
+            </div>
+            <!-- /.card-header -->
+            <!-- card-body -->
+            <div class="card-body">
+              <!-- table -->
+              <table class="inputs d-flex justify-content-end mb-1">
+                <tbody>
+                  <tr>
+                    <td>Fecha mínima:</td>
+                    <td>
+                      <input type="text" id="min" name="min">
+                    </td>
+                    <td>Fecha máxima:</td>
+                    <td>
+                      <input type="text" id="max" name="max">
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <table id="tablaExpedientes" class="table table-bordered table-striped">
+                <thead class="thead-dark text-center">
+                  <tr>
+                    <th>id</th>
+                    <th>Nombre del Barco</th>
+                    <th>IMO</th>
+                    <th>Fecha del expediente</th>
+                    <th>Fecha de creación del expediente</th>
+                    <th>Registrado Por</th>
+                    <th>Accion</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr id="documentId1">
+                    <td>
+                      01
+                    </td>
+                    <td>
+                      Lorem Ipsum
+                    </td>
+                    <td>
+                      XXXXXXXXXX
+                    </td>
+                    <td>
+                      01-12-2023
+                    </td>
+                    <td>
+                      03-12-2023
+                    </td>
+                    <td>
+                      Administrador
+                    </td>
+                    <td class="text-center">
+                      <a href="./documents_list.html"><button type="button" class="btn btn-success btn-sm"><img
+                            src="../icons/archive-modules/folder-check.svg" alt="eye"></button></a>
+                      <button type="button" class="btn btn-warning btn-sm"><img
+                          src="../icons/archive-modules/folder-cog.svg" alt="user-edit"></button>
+                      <button type="button" class="btn btn-danger btn-sm" onclick="deleteDocument(1)"><img
+                          src="../icons/archive-modules/folder-off.svg" alt="user-delete"></button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <!-- /.table -->
+            </div>
+            <!-- /.card-body -->
+          </div>
+        </div>
+      </div>
+      <!-- /.Contenido principal -->
+    </div>
+    <!-- ALERTS [VER-USUARIO] -->
+
+    <!-- ALERTS [ELIMINAR-USUARIO] -->
+    <script>
+      function deleteDocument(id) {
+        alertify.confirm("¿Está seguro de que desea borrar el expediente seleccionado?.",
+          function () {
+            const e = document.getElementById("documentId1");
+            e.remove();
+            alertify.success('Expediente borrado con exito!');
+          },
+          function () {
+            alertify.error('Operación Cancelada');
+          }).setHeader('<div class="d-flex justify-content-center">Borrar Expediente</div>');
+      }
+    </script>
+    <!-- ./ALERTS [ELIMINAR-USUARIO] -->
+
+    <!-- /.CONTENT WRAPPER, CONTIENE EL CONTENIDO PRINCIPAL -->
+
+    <!-- Footer principal-->
+    <footer class="main-footer">
+      <!-- To the right -->
+      <div class="float-right d-none d-sm-inline">
+        <b>Versión</b> 1.0.0 /
+        <strong>
+
+        </strong>
+      </div>
+      <!-- Default to the left -->
+      <strong>Copyright &copy; 2023 <a href="https://github.com/AbeJ19">Abraham Bracho</a>.</strong> Todos los derechos
+      reservados.
+    </footer>
+    <!-- ./Footer principal-->
+  </div>
+  <!-- ./wrapper -->
+
+  <!-- REQUIRED SCRIPTS -->
+  <!-- jQuery -->
+  <script src="../plugins/jquery/jquery.min.js"></script>
+  <!-- Bootstrap 4 -->
+  <script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom-File-input -->
+  <script src="../plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
+  <!-- jQuery Validation -->
+  <script src="../plugins/jquery-validation/jquery.validate.min.js"></script>
+  <script src="../plugins/jquery-validation/additional-methods.min.js"></script>
+  <!-- AdminLTE App -->
+  <script src="../dist/js/adminlte.min.js"></script>
+  <!-- ./REQUIRED SCRIPTS -->
+
+  <!-- DataTables  & Plugins -->
+  <script src="../plugins/datatables/jquery.dataTables.min.js"></script>
+  <script src="../plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+  <script src="../plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+  <script src="../plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+  <script src="../plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+  <script src="../plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+  <script src="../plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+  <script src="../plugins/datatables-buttons/js/buttons.print.min.js"></script>
+  <script src="../plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+  <!-- Tempusdominus Bootstrap 4 -->
+  <script src="../plugins/moment/moment.min.js"></script>
+  <script src="../plugins/datatables-datetime/dataTables.dateTime.min.js"></script>
+  <script src="../plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+
+  <script>
+    var minDate, maxDate;
+
+    // Custom filtering function which will search data in column four between two values
+    $.fn.dataTable.ext.search.push(
+      function (settings, data, dataIndex) {
+        var min = minDate.val();
+        var max = maxDate.val();
+        var date = new Date(data[3].split('-').reverse().join('-'));
+
+        if (
+          (min === null && max === null) ||
+          (min === null && date <= max) ||
+          (min <= date && max === null) ||
+          (min <= date && date <= max)
+        ) {
+          return true;
+        }
+        return false;
+      }
+    );
+
+    $(document).ready(function () {
+      // Create date inputs
+      minDate = new DateTime($('#min'), {
+        format: 'DD-MM-YYYY',
+      });
+      maxDate = new DateTime($('#max'), {
+        format: 'DD-MM-YYYY',
+      });
+
+      // DataTables initialisation
+      var table = $("#tablaExpedientes").DataTable({
+        dom: "<'row'<'col-sm-12 col-md-6 mb-3'B><'col-sm-12 col-md-6'f><'col-sm-12 col-md-6'l>>" +
+          "<'row'<'col-sm-12'tr>>" +
+          "<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7'p>>",
+        language: {
+          url: '../modulesjs/datatable.JSON'
+        },
+        buttons: [
+          {
+            extend: 'print',
+            text: 'Imprimir',
+            title: ` <div class="d-flex justify-content-center">
+                    <img height="80px" src="../media/img/logos/ship-login.jpg">
+                    <h1>Exportación en formato de Impresión</h1>
+                    <img height="80px" src="../media/img/logos/ship-login.jpg">
+                    </div>`,
+            messageTop: '<h4 class="mt-5 mb-3">Listado de expedientes</h4>',
+            messageBottom: 'Exportado por Administrador',
+            customize: function (win) {
+              $(win.document.body).find('h4').css('text-align', 'center').css('text-size', '10px');
+              $(win.document.body).find('h1').css('text-align', 'center').css('text-size', '10px');
+              $(win.document.body).find('table').css('text-align', 'center');
+            },
+            exportOptions: {
+              columns: [0, 1, 2, 3, 4, 5],
+            }
+          }
+        ]
+      });
+
+      // Refilter the table
+      $('#min, #max').on('change', function () {
+        table.draw();
+      });
+    });
+
+  </script>
+</body>
+
+</html>
